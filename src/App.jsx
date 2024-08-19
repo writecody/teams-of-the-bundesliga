@@ -1,5 +1,6 @@
 import './App.css'
 import Header from './components/Header'
+import TeamsContainer from './components/teamsContainer'
 
 function App() {
 
@@ -7,7 +8,7 @@ function App() {
     <>
       <Header></Header>
       <main>
-        LOGO BUTTONS
+        <TeamsContainer />
         About Link
       </main>
     </>
