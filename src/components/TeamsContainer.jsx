@@ -6,24 +6,22 @@ export default function TeamsContainer() {
     <>
       <div
         className="teams-container"
-        style={{ 
-            background: `url(${backgroundImage}`,
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat" 
+        style={{
+          background: `url(${backgroundImage}`,
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
         }}
       >
         {teamsInfo.map((object, index) => {
           return (
-            <>
-              <div key={index} className="teams-container__logo-container">
-                <img
-                  className="teams-container__logo"
-                  src={object.logo_image}
-                  alt={object.alt_text}
-                />
-              </div>
-            </>
+            <div key={index} className="teams-container__logo-container">
+              <img
+                className="teams-container__logo"
+                src={object.logo_image}
+                alt={object.alt_text}
+              />
+            </div>
           );
         })}
       </div>

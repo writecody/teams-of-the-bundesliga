@@ -11,7 +11,6 @@ h1 {
   letter-spacing: 0.25rem;
   padding: 1rem;
   text-shadow: -3px 3px #ea324e;
-  /* width: 70%; */
 }
 i {
   color: lightgray;
@@ -33,9 +32,9 @@ a.mapboxgl-ctrl-logo {
   align-items: stretch;
   box-shadow: 0px 2px 4px 1px darkgray;
   display: inline-flex;
+  margin-bottom: 2rem;
 }
 .header__letter {
-  border-radius: 2px;
   display: flex;
   flex-direction: col;
   font-size: clamp(1rem, 3vw, 2.5rem);
