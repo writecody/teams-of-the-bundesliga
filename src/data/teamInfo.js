@@ -86,7 +86,7 @@ import WolfsburgLogo from '../assets/wolfsburg-logo.png';
 // import WolfsburgTeamImage from '../assets/team-and-stadium-images/id-22-team-photo.jpg';
 // import WolfsburgStadiumImage from '../assets/team-and-stadium-images/id-22-stadium-photo.jpg';
 
-export const teamInfo = [
+export const teamsInfo = [
   {
     name: 'Borussia Dortmund', 
     stadium_name: 'Westfalenstadion', 
