@@ -30,11 +30,12 @@ a.mapboxgl-ctrl-logo {
 }
 .header {
   align-items: stretch;
-  box-shadow: 0px 2px 4px 1px darkgray;
+  box-shadow: 0px 2px 4px 1px rgb(96, 96, 96);
   display: inline-flex;
-  margin-bottom: 2rem;
+  margin: 2rem 0;
 }
 .header__letter {
+  background-color: rgb(243, 192, 200);
   display: flex;
   flex-direction: col;
   font-size: clamp(1rem, 3vw, 2.5rem);
