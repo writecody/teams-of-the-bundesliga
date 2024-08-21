@@ -1,7 +1,9 @@
 import { teamsInfo } from "../data/teamInfo";
 import backgroundImage from "../assets/cartoon-soccer-ball-on-field.png";
 
-export default function TeamsContainer() {
+export default function TeamsContainer({onSelectTeam}) {
+
+
   return (
     <>
       <div
@@ -15,7 +17,7 @@ export default function TeamsContainer() {
       >
         {teamsInfo.map((object, index) => {
           return (
-            <div key={index} className="teams-container__logo-container">
+            <div key={index} className="teams-container__logo-container" onClick={() => onSelectTeam(object)}>
               <img
                 className="teams-container__logo"
                 src={object.logo_image}
