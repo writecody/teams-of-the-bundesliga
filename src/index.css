@@ -95,7 +95,7 @@ a.mapboxgl-ctrl-logo {
 .info-container__links a:hover {
   color: #ea324e;
 }
-.team-page {
+.team-view {
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -104,18 +104,18 @@ a.mapboxgl-ctrl-logo {
   text-align: center;
   width: 90%;
 }
-.team-page__caption {
+.team-view__caption {
   background: #fff0f5;
   font-family: "Contrail One", cursive;
   font-size: 1.5rem;
   letter-spacing: 0.075rem;
   margin: 0.75rem 0 0.5rem 0;
 }
-.team-page__header img {
+.team-view__header img {
   object-fit: cover;
   width: 15rem;
 }
-.team-page__image {
+.team-view__image {
   box-shadow: 0px 2px 4px 2px gray;
   object-fit: cover;
   width: 100%;
