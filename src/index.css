@@ -99,8 +99,8 @@ a.mapboxgl-ctrl-logo {
   align-items: center;
   display: flex;
   flex-direction: column;
+  height: 67%;
   justify-content: center;
-  margin: 1rem auto;
   text-align: center;
   width: 90%;
 }
