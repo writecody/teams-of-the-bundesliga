@@ -6,7 +6,7 @@ import TeamsContainer from "./components/teamsContainer";
 import TeamViewModal from "./components/TeamViewModal";
 
 function App() {
-  const [selectedTeam, setSelectedTeam] = useState(undefined);
+  const [selectedTeam, setSelectedTeam] = useState({});
   console.log(selectedTeam);
   let openModal;
 
@@ -15,7 +15,6 @@ function App() {
   function handleSelectTeam(teamObject) {
     const teamToDisplay = teamObject;
     setSelectedTeam(teamToDisplay);
-
     dialogRef.current.showModal();
 
     return;
