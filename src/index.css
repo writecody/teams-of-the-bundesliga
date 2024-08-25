@@ -99,7 +99,7 @@ a.mapboxgl-ctrl-logo {
   align-items: center;
   display: flex;
   flex-direction: column;
-  height: 67%;
+  height: 33%;
   justify-content: center;
   text-align: center;
   width: 90%;
@@ -119,6 +119,11 @@ a.mapboxgl-ctrl-logo {
   box-shadow: 0px 2px 4px 2px gray;
   object-fit: cover;
   width: 100%;
+}
+.team-view__logo-image {
+  height: 7rem;
+  margin: 2rem;
+  width: 7rem;
 }
 .teams-container {
   align-items: center;

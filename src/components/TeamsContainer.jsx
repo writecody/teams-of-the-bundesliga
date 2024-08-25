@@ -1,8 +1,19 @@
+import { useState } from "react";
+
 import { teamsInfo } from "../data/teamInfo";
 import backgroundImage from "../assets/cartoon-soccer-ball-on-field.png";
+import TeamViewModal from "./TeamViewModal";
 
-export default function TeamsContainer({ onSelectTeam }) {
-  // const
+export default function TeamsContainer({}) {
+  const [selectedTeam, setSelectedTeam] = useState({});
+  console.log('selectedTeam: ', selectedTeam)
+
+  function handleSelectTeam(teamObject) {
+    const teamToDisplay = teamObject;
+    console.log("handleSelectTeam()");
+    setSelectedTeam(teamToDisplay);
+    return;
+  }
 
   return (
     <>
@@ -20,7 +31,7 @@ export default function TeamsContainer({ onSelectTeam }) {
             <div
               key={index}
               className="teams-container__logo-container"
-              onClick={() => onSelectTeam(object)}
+              onClick={() => handleSelectTeam(object)}
             >
               <img
                 className="teams-container__logo"
@@ -31,6 +42,7 @@ export default function TeamsContainer({ onSelectTeam }) {
           );
         })}
       </div>
+      <TeamViewModal selectedTeam={selectedTeam} />
     </>
   );
 }
