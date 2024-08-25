@@ -6,12 +6,25 @@ import TeamViewModal from "./TeamViewModal";
 
 export default function TeamsContainer({}) {
   const [selectedTeam, setSelectedTeam] = useState({});
-  console.log('selectedTeam: ', selectedTeam)
+  const [showModal, setShowModal] = useState(false);
+
+  console.log("selectedTeam: ", selectedTeam);
+
+  function handleShowModal() {
+    setShowModal(true);
+  }
+
+  function handleCloseModal() {
+    
+    setShowModal(false);
+  }
 
   function handleSelectTeam(teamObject) {
     const teamToDisplay = teamObject;
     console.log("handleSelectTeam()");
     setSelectedTeam(teamToDisplay);
+    handleShowModal();
+
     return;
   }
 
@@ -42,7 +55,9 @@ export default function TeamsContainer({}) {
           );
         })}
       </div>
-      <TeamViewModal selectedTeam={selectedTeam} />
+      {showModal && (
+        <TeamViewModal selectedTeam={selectedTeam} onClose={handleCloseModal} />
+      )}
     </>
   );
 }

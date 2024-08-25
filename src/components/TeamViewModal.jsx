@@ -1,4 +1,4 @@
-export default function TeamViewModal({ selectedTeam }) {
+export default function TeamViewModal({ selectedTeam, onClose }) {
   return (
     <dialog className="team-view">
       <h2 className="team-view__header">{selectedTeam.name}</h2>
@@ -9,7 +9,7 @@ export default function TeamViewModal({ selectedTeam }) {
       />
       <p className="team-view__caption">{selectedTeam.nickname}</p>
       <form method="dialog">
-        <button>Close</button>
+        <button onClick={onClose}>Close</button>
       </form>
     </dialog>
   );
