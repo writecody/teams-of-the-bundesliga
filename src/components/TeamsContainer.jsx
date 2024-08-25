@@ -2,28 +2,16 @@ import { useState } from "react";
 
 import { teamsInfo } from "../data/teamInfo";
 import backgroundImage from "../assets/cartoon-soccer-ball-on-field.png";
-import TeamViewModal from "./TeamViewModal";
 
 export default function TeamsContainer({}) {
   const [selectedTeam, setSelectedTeam] = useState({});
-  const [showModal, setShowModal] = useState(false);
 
   console.log("selectedTeam: ", selectedTeam);
-
-  function handleShowModal() {
-    setShowModal(true);
-  }
-
-  function handleCloseModal() {
-    
-    setShowModal(false);
-  }
 
   function handleSelectTeam(teamObject) {
     const teamToDisplay = teamObject;
     console.log("handleSelectTeam()");
     setSelectedTeam(teamToDisplay);
-    handleShowModal();
 
     return;
   }
@@ -55,9 +43,6 @@ export default function TeamsContainer({}) {
           );
         })}
       </div>
-      {showModal && (
-        <TeamViewModal selectedTeam={selectedTeam} onClose={handleCloseModal} />
-      )}
     </>
   );
 }
