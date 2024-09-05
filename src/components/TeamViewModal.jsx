@@ -1,8 +1,8 @@
 import { forwardRef } from "react";
 
-const TeamViewModal = forwardRef(function TeamViewModal({ teamToView }, ref) {
+const TeamViewModal = forwardRef(function TeamViewModal({ teamToView={} }, ref) {
   return (
-    <dialog ref={ref}>
+    <dialog ref={ref} className="team-view">
       <h2
         className="team-view__header"
         style={{ color: `${teamToView.primary_color}` }}
