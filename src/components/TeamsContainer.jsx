@@ -1,27 +1,26 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 import { teamsInfo } from "../data/teamInfo";
+
 import backgroundImage from "../assets/cartoon-soccer-ball-on-field.png";
-import Modal from "./Modal";
+import TeamViewModal from "./TeamViewModal";
 
 export default function TeamsContainer() {
   const [selectedTeam, setSelectedTeam] = useState();
+  const dialog = useRef();
 
   function handleSelectTeam(teamObject) {
     const teamToDisplay = teamObject;
     setSelectedTeam(teamToDisplay);
+    dialog.current.showModal();
 
     return;
-  }
-
-  function handleClose() {
-    setSelectedTeam(null);
   }
 
   return (
     <>
       {selectedTeam && (
-        <Modal teamToView={selectedTeam} handleClose={handleClose}/>
+        <TeamViewModal ref={dialog} teamToView={selectedTeam}></TeamViewModal>
       )}
       <div
         className="teams-container"

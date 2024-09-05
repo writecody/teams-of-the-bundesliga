@@ -1,6 +1,8 @@
-export default function Modal({ teamToView = null, handleClose }) {
+import { forwardRef } from "react";
+
+const TeamViewModal = forwardRef(function TeamViewModal({ teamToView }, ref) {
   return (
-    <dialog className="team-view backdrop" open>
+    <dialog ref={ref}>
       <h2
         className="team-view__header"
         style={{ color: `${teamToView.primary_color}` }}
@@ -12,11 +14,11 @@ export default function Modal({ teamToView = null, handleClose }) {
         src={teamToView.logo_image}
         alt={teamToView.alt_text}
       />
-      <form>
-        <button onClick={handleClose} method="dialog">
-          Close
-        </button>
+      <form method="dialog">
+        <button>Close</button>
       </form>
     </dialog>
   );
-}
+});
+
+export default TeamViewModal;
