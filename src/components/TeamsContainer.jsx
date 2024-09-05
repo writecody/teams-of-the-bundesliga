@@ -19,9 +19,9 @@ export default function TeamsContainer() {
 
   return (
     <>
-      {selectedTeam && (
+ 
         <TeamViewModal ref={dialog} teamToView={selectedTeam}></TeamViewModal>
-      )}
+ 
       <div
         className="teams-container"
         style={{
