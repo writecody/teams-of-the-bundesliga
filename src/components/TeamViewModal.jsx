@@ -1,8 +1,21 @@
-import { forwardRef } from "react";
+import { forwardRef, useImperativeHandle, useRef } from "react";
 
-const TeamViewModal = forwardRef(function TeamViewModal({ teamToView={} }, ref) {
+const TeamViewModal = forwardRef(function TeamViewModal(
+  { teamToView = {} },
+  ref
+) {
+  const dialog = useRef();
+
+  useImperativeHandle(ref, () => {
+    return {
+      open() {
+        dialog.current.showModal();
+      },
+    };
+  });
+
   return (
-    <dialog ref={ref} className="team-view">
+    <dialog ref={dialog} className="team-view">
       <h2
         className="team-view__header"
         style={{ color: `${teamToView.primary_color}` }}

@@ -97,7 +97,8 @@ a.mapboxgl-ctrl-logo {
 }
 .team-view {
   border: none;
-  background: rgba(239, 234, 234, 0.95);
+  background: darkgray(239, 234, 234, 0.95);
+  box-shadow: 0 0.125rem 16px -7px #0c0904;
 }
 .team-view__caption {
   background: #fff0f5;

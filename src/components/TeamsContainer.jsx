@@ -12,7 +12,7 @@ export default function TeamsContainer() {
   function handleSelectTeam(teamObject) {
     const teamToDisplay = teamObject;
     setSelectedTeam(teamToDisplay);
-    dialog.current.showModal();
+    dialog.current.open();
 
     return;
   }
