@@ -28,7 +28,7 @@ const TeamViewModal = forwardRef(function TeamViewModal(
         alt={teamToView.alt_text}
       />
       <form method="dialog">
-        <button>Close</button>
+        <button className="team-view__close-button">Close</button>
       </form>
     </dialog>
   );

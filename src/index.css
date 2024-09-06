@@ -97,8 +97,8 @@ a.mapboxgl-ctrl-logo {
 }
 .team-view {
   border: none;
-  background: darkgray(239, 234, 234, 0.95);
   box-shadow: 0 0.125rem 16px -7px #0c0904;
+  width: 67%;
 }
 .team-view__caption {
   background: #fff0f5;
@@ -106,6 +106,12 @@ a.mapboxgl-ctrl-logo {
   font-size: 1.5rem;
   letter-spacing: 0.075rem;
   margin: 0.75rem 0 0.5rem 0;
+}
+.team-view__close-button {
+  box-shadow: 0px 1px 1px 0px darkgray;
+  cursor: pointer;
+  height: 2rem;
+  width: 4rem;
 }
 .team-view__header img {
   object-fit: cover;
@@ -137,6 +143,7 @@ a.mapboxgl-ctrl-logo {
   align-items: center;
   background: darkgray;
   box-shadow: 0 0.125rem 0.25rem #0c0904;
+  cursor: pointer;
   display: flex;
   justify-content: center;
   margin: 1rem;
@@ -144,7 +151,6 @@ a.mapboxgl-ctrl-logo {
 }
 .teams-container__logo-container:hover {
   box-shadow: 0 0.25rem 0.5rem #0c0904;
-  cursor: pointer;
 }
 .teams-container__logo-container:active {
   box-shadow: 0 0.25rem 0.5rem #ea324e;
